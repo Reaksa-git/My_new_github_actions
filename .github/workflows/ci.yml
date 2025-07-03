@@ -1,0 +1,28 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]         # Trigger when pushing to main branch
+  pull_request:
+    branches: [ main ]         # Trigger on PRs targeting main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'   # You can also use 18 or latest if needed
+
+      - name: Install dependencies
+        run: |
+          yarn install         # or use: npm install
+
+      - name: Run tests
+        run: |
+          yarn test            # or use: npm test
