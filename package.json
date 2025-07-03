@@ -1,0 +1,19 @@
+{
+  "name": "my_new_github_actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
